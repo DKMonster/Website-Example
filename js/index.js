@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var btn = $('#btnGetNumber');
 	var next = $('#btnNextNumber');
 	var restart = $('#btnRestart');
+	var history = $('#history');
 
 	var list = $('.list');
 	var random = list.find('p');
@@ -13,6 +14,8 @@ $(document).ready(function() {
 	var min = 1;
 	var max = 1250;
 	var ary = new Array();
+
+	var his = 1;
 
 	ion.sound({
 		sounds: [
@@ -29,9 +32,15 @@ $(document).ready(function() {
 	// audioElement.setAttribute('loop', 'true');
 	// audioElement.play();
 
+	// build history
+	build_history(his);
+
+	// build restart
 	restart.on('click' , function(){
 		random.html("");
 		ul.html("");
+		his++;
+		build_history(his);
 	});
 
 	btn.on('click' , function(){
@@ -65,11 +74,19 @@ $(document).ready(function() {
 						$(this).removeClass('animated bounceIn');
 					});
 
+				history.find('.his-'+his+'').append('<li data-num="'+number+'">'+parseInt(number)+'</li>');
+
 				run++;
 			}
 
 		});
 	});
+
+	function build_history(his){
+		history.append(
+			'<div class="his-title" contenteditable="true">點擊並取個標題</div>'+
+			'<ul class="his-'+his+'"></ul>');
+	}
 
 	function getRandomNumber(){
 		while(true){
