@@ -7,7 +7,7 @@
 		<meta name="robots" content="all">
 		<meta name="author" content="David Kross">
 		<meta name="google" content="notranslate" />
-		<title></title>
+		<title>Ringring</title>
 
 		<!-- ********** CSS ********** -->
 		<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css'>
@@ -18,6 +18,7 @@
 		<!-- ********** icon ********** -->
 		<link href="css/animation.css" rel='stylesheet' type='text/css'>
 		<link href="css/fontello.css" rel='stylesheet' type='text/css'>
+		<link href="css/animate.min.css" rel='stylesheet' type='text/css'>
 
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
@@ -30,10 +31,54 @@
 	</head>
 	<body ng-app="">
 		<!-- start to website. -->
-
+		<!-- just background -->
+		<div class="coverbg"></div>
+		<div class="coverbg2"></div>
+		<!-- main -->
 		<div class="wrapper">
+			<div class="logo">
+				<img src="img/logo.png" height="1122" width="983" alt="">
+			</div>
+			<div class="card">
+				<h2>
+					麥當勞<br>
+					<small>2014 絕色幻境派對</small>
+				</h2>
+				<div class="circle"></div>
+				<div class="btnGetNumber" id="btnGetNumber">
+					<a href="">Get number</a>
+				</div>
+				<div class="btnRestart" id="btnRestart">
+					<i class="icon-spin3">Restart</i>
+				</div>
+				<div class="btnNextNumber" id="btnNextNumber">
+					<i class="icon-forward-1">Next</i>
+				</div>
+			</div>
+			<div class="list">
+				<div class="color-line">
+					<div class="color color1"></div>
+					<div class="color color2"></div>
+					<div class="color color3"></div>
+					<div class="color color4"></div>
+					<div class="color color5"></div>
+					<div class="color color6"></div>
+				</div>
+				<div class="random"><p></p></div>
+				<div class="color-line">
+					<div class="color color1"></div>
+					<div class="color color2"></div>
+					<div class="color color3"></div>
+					<div class="color color4"></div>
+					<div class="color color5"></div>
+					<div class="color color6"></div>
+				</div>
+				<ul></ul>
+			</div>
 
 		</div>
+		<div class="footer"></div>
+		<div class="author">Program By David Kross</div>
 
 		<!-- ********** JS IM ********** -->
 		<!--[if lt IE 9]>
@@ -51,6 +96,8 @@
 		<script type="text/javascript" src="js/plugin/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/plugin/holder.js"></script>
 		<script type="text/javascript" src="js/plugin/jquery.localisation.js"></script>
+		<script type="text/javascript" src="js/plugin/jquery.transit.min.js"></script>
+		<script type="text/javascript" src="js/plugin/ion.sound.min.js"></script>
 		<!-- ********** JS Main ********** -->
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
